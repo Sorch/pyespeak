@@ -1,11 +1,9 @@
 import main
-
+import re
 speak = main.Speaker()
+import time
+import threading
 
-#speak.setVoiceParams("nl", 130)
-#speak.speak("hi")
-
-for voice in speak.listVoices():
-	print(voice)
-	speak.setVoiceParams(voice, 150)
-	speak.speak("1")
+for v in speak.listVoices():
+    speak.setVoiceParams(voice = v)
+    speak.speak("1")
